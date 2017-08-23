@@ -1,4 +1,5 @@
 defmodule Catcasts.AuthController do
-  use Catcasts.Web, :controller
+  use CatcastsWeb, :controller
+
   plug Ueberauth
 end
