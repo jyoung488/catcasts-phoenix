@@ -1,5 +1,5 @@
 defmodule Catcasts.AuthControllerTest do
-  use Catcasts.ConnCase
+  use CatcastsWeb.ConnCase
 
   test "Sign in with Google", %{conn: conn} do
     conn = get conn, "/auth/google?scope=email%20profile"
