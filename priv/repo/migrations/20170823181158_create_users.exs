@@ -1,4 +1,4 @@
-defmodule Catcasts.Repo.Migrations.AddUsers do
+defmodule Catcasts.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do
@@ -11,5 +11,6 @@ defmodule Catcasts.Repo.Migrations.AddUsers do
 
       timestamps()
     end
+
   end
 end
