@@ -1,5 +1,8 @@
 # Catcasts
 
+# Tutorial
+  * Learning Elixir & [Creating An App](https://medium.brianemory.com/elixir-phoenix-creating-an-app-part-1-the-setup-6626264be03)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
