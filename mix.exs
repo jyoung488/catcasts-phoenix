@@ -20,7 +20,7 @@ defmodule Catcasts.Mixfile do
   def application do
     [
       mod: {Catcasts.Application, []},
-      extra_applications: [:logger, :runtime_tools, :ueberauth, :ueberauth_google]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -43,7 +43,7 @@ defmodule Catcasts.Mixfile do
       {:cowboy, "~> 1.0"},
       {:ueberauth, "~> 0.4"},
       {:ueberauth_google, "~> 0.5"},
-      {:ex_machina, "~> 2.0"}
+      {:ex_machina, "~> 2.0", only: :test}
     ]
   end
 

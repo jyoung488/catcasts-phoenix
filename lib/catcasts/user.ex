@@ -3,7 +3,6 @@ defmodule Catcasts.User do
   import Ecto.Changeset
   alias Catcasts.User
 
-
   schema "users" do
     field :email, :string
     field :first_name, :string

@@ -1,4 +1,4 @@
-defmodule Catcasts.AuthController do
+defmodule CatcastsWeb.AuthController do
   use CatcastsWeb, :controller
   plug Ueberauth
 
@@ -18,12 +18,18 @@ defmodule Catcasts.AuthController do
         conn
         |> put_flash(:info, "Thank you for signing in!")
         |> put_session(:user_id, user.id)
-        |> redirect(to: "/")
+        |> redirect(to: page_path(conn, :index))
       {:error, _reason} ->
         conn
         |> put_flash(:error, "Error signing in")
-        |> redirect("/")
+        |> redirect(to: page_path(conn, :index))
     end
+  end
+
+  def delete(conn, _params) do
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: page_path(conn, :index))
   end
 
   defp insert_or_update_user(changeset) do
