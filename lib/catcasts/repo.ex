@@ -1,6 +1,6 @@
 defmodule Catcasts.Repo do
   use Ecto.Repo, otp_app: :catcasts
-
+  
   @doc """
   Dynamically loads the repository url from the
   DATABASE_URL environment variable.
